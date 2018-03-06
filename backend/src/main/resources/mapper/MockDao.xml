@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="person.hwj.mockdog.dao.MockDao">
+	<resultMap id="mockResultMap" type="person.hwj.mockdog.entity.MockEntity">
+		<id column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="uri" property="uri" />
+		<result column="req_method" property="reqMethod" />
+		<result column="params" property="params" />
+		<result column="response" property="response" />
+		<result column="timeout" property="timeout" />
+		<result column="http_code" property="httpCode" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<select id="list" resultMap="mockResultMap">
+		select
+		id,name,uri,req_method,params,response,timeout,http_code from mock
+	</select>
+	<select id="selectByUri" resultMap="mockResultMap">
+		select
+		id,name,uri,req_method,params,response,timeout,http_code from mock
+		where uri=#{uri}
+	</select>
+	<select id="selectById">
+		select
+		id,name,uri,req_method,params,response,timeout,http_code from mock
+		where id=#{mockId}
+	</select>
+	<insert id="insert" useGeneratedKeys="true" keyProperty="mockEntity.id"
+		parameterType="person.hwj.mockdog.entity.MockEntity">
+		insert into mock (name, uri,
+		req_method,params,response,timeout,http_code)
+		values
+		(#{mockEntity.name}, #{mockEntity.uri},
+		#{mockEntity.reqMethod},#{mockEntity.params},
+		#{mockEntity.response},#{mockEntity.timeout},#{mockEntity.httpCode})
+	</insert>
+	<update id="update">
+		update mock set
+		name =#{mockEntity.name},
+		uri=#{mockEntity.uri},
+		req_method=#{mockEntity.reqMethod},
+		params=#{mockEntity.params},
+		response=#{mockEntity.response},
+		timeout=#{mockEntity.timeout},
+		http_code=#{mockEntity.httpCode}
+		where id
+		=#{mockEntity.id}
+	</update>
+
+	<delete id="delete">
+		delete from mock where id=#{mockId}
+	</delete>
+</mapper>
