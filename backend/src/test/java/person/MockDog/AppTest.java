@@ -1,4 +1,4 @@
-package person.hwj.MockDog;
+package person.MockDog;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
