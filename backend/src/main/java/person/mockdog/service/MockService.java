@@ -1,7 +1,7 @@
-package person.hwj.mockdog.service;
+package person.mockdog.service;
 
-import person.hwj.mockdog.dto.ReturnInfo;
-import person.hwj.mockdog.entity.MockEntity;
+import person.mockdog.dto.ReturnInfo;
+import person.mockdog.entity.MockEntity;
 
 public interface MockService {
     public ReturnInfo mockAdd(MockEntity mockEntity);

@@ -1,10 +1,10 @@
-package person.hwj.mockdog;
+package person.mockdog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import person.hwj.mockdog.utils.SpringContextUtil;
+import person.mockdog.utils.SpringContextUtil;
 
 /**
  * Hello world!

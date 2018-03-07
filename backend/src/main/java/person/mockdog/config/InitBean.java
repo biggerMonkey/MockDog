@@ -1,10 +1,10 @@
-package person.hwj.mockdog.config;
+package person.mockdog.config;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import person.hwj.mockdog.filter.RequestFilter;
+import person.mockdog.filter.RequestFilter;
 
 @Configuration
 public class InitBean {

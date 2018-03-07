@@ -1,4 +1,4 @@
-package person.hwj.mockdog.utils;
+package person.mockdog.utils;
 
 import org.springframework.context.ApplicationContext;
 

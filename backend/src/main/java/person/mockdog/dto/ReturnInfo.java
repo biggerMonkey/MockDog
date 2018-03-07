@@ -1,10 +1,10 @@
-package person.hwj.mockdog.dto;
+package person.mockdog.dto;
 
 import java.util.List;
 
-import person.hwj.mockdog.constant.CodeEnum;
-
 import com.github.pagehelper.Page;
+
+import person.mockdog.constant.CodeEnum;
 
 public class ReturnInfo {
     // code 码

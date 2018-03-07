@@ -1,4 +1,4 @@
-package person.hwj.mockdog.filter;
+package person.mockdog.filter;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,12 +16,12 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
-import person.hwj.mockdog.dao.MockDao;
-import person.hwj.mockdog.dto.ResponseDTO;
-import person.hwj.mockdog.dto.ResponseDTO.ResponseInfo;
-import person.hwj.mockdog.entity.MockEntity;
-import person.hwj.mockdog.entity.Param;
-import person.hwj.mockdog.utils.SpringContextUtil;
+import person.mockdog.dao.MockDao;
+import person.mockdog.dto.ResponseDTO;
+import person.mockdog.dto.ResponseDTO.ResponseInfo;
+import person.mockdog.entity.MockEntity;
+import person.mockdog.entity.Param;
+import person.mockdog.utils.SpringContextUtil;
 
 import com.alibaba.fastjson.JSON;
 

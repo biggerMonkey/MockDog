@@ -1,4 +1,4 @@
-package person.hwj.mockdog.controller;
+package person.mockdog.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import person.hwj.mockdog.dto.ReturnInfo;
-import person.hwj.mockdog.entity.MockEntity;
-import person.hwj.mockdog.service.MockService;
+import person.mockdog.dto.ReturnInfo;
+import person.mockdog.entity.MockEntity;
+import person.mockdog.service.MockService;
 
 @RestController
 @RequestMapping("/mock")
