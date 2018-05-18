@@ -13,6 +13,8 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
@@ -26,6 +28,8 @@ import person.hwj.mockdog.utils.SpringContextUtil;
 import com.alibaba.fastjson.JSON;
 
 public class RequestFilter implements Filter {
+
+    private static final Logger LOG = LoggerFactory.getLogger(RequestFilter.class);
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -50,6 +54,7 @@ public class RequestFilter implements Filter {
             if (!uri.equals(tempMock.getUri())) {
                 continue;
             }
+            LOG.info("接收mock请求：" + uri + " " + tempMock.toString());
             String param = tempMock.getParams();
             if (!StringUtils.isEmpty(param)) {
                 List<Param> params = JSON.parseObject(param, List.class);
@@ -69,7 +74,7 @@ public class RequestFilter implements Filter {
             }
             httpResponse.setStatus(tempMock.getHttpCode());
             try {
-                Thread.sleep(tempMock.getTimeout());
+                Thread.sleep(tempMock.getTimeout() * 1000);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
