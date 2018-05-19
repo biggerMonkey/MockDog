@@ -1,4 +1,4 @@
-package person.hwj.mockdog.dto;
+package person.mockdog.dto;
 
 public class ResponseDTO<T> {
     private int code;

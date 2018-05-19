@@ -1,14 +1,14 @@
-package person.hwj.mockdog.service.impl;
+package person.mockdog.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import person.hwj.mockdog.dao.MockDao;
-import person.hwj.mockdog.dto.ReturnInfo;
-import person.hwj.mockdog.entity.MockEntity;
-import person.hwj.mockdog.service.MockService;
+import person.mockdog.dao.MockDao;
+import person.mockdog.dto.ReturnInfo;
+import person.mockdog.entity.MockEntity;
+import person.mockdog.service.MockService;
 
 @Service
 public class MockServiceImpl implements MockService {

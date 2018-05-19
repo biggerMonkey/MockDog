@@ -1,4 +1,4 @@
-package person.hwj.mockdog.entity;
+package person.mockdog.entity;
 
 public class Param {
     private String paramName;

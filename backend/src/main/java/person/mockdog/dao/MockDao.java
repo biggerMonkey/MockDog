@@ -1,11 +1,11 @@
-package person.hwj.mockdog.dao;
+package person.mockdog.dao;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import person.hwj.mockdog.entity.MockEntity;
+import person.mockdog.entity.MockEntity;
 
 @Mapper
 public interface MockDao {

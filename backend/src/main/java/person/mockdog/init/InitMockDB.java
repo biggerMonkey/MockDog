@@ -1,11 +1,11 @@
-package person.hwj.mockdog.init;
+package person.mockdog.init;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import person.hwj.mockdog.dao.MockDao;
+import person.mockdog.dao.MockDao;
 
 /**
  * 

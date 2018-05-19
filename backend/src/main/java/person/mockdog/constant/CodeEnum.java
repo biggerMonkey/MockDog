@@ -1,4 +1,4 @@
-package person.hwj.mockdog.constant;
+package person.mockdog.constant;
 
 /**
  * 返回前端公用code码 Created by lrf on 17-7-28.
