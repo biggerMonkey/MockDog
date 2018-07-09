@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="person.hwj.mockdog.dao.MockDao">
-	<resultMap id="mockResultMap" type="person.hwj.mockdog.entity.MockEntity">
+	<resultMap id="mockResultMap" type="person.mockdog.entity.MockEntity">
 		<id column="id" property="id" />
 		<result column="name" property="name" />
 		<result column="uri" property="uri" />
@@ -27,7 +27,7 @@
 		where id=#{mockId}
 	</select>
 	<insert id="insert" useGeneratedKeys="true" keyProperty="mockEntity.id"
-		parameterType="person.hwj.mockdog.entity.MockEntity">
+		parameterType="person.mockdog.entity.MockEntity">
 		insert into mock (name, uri,
 		req_method,params,response,timeout,http_code)
 		values
